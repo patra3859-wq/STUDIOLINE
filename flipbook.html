@@ -1,16 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
+  <meta charset='UTF-8'>
   <title>dFlip Fullscreen Online PDF Viewer</title>
 
-  <!-- ✅ jQuery আগে লোড -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <!-- ✅ jQuery -->
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+  <script src='https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'></script>
 
-  <!-- ✅ dFlip Official CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dflip@2.0.0/dist/dflip.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/dflip@2.0.0/dist/dflip.min.js"></script>
+  <!-- ✅ dFlip CSS & JS (official CDN) -->
+  <link rel='stylesheet' href='https://www.dearflip.com/wp-content/plugins/dflip/assets/css/dflip.min.css' />
+  <script src='https://www.dearflip.com/wp-content/plugins/dflip/assets/js/dflip.min.js'></script>
 
   <style>
     html, body {
@@ -18,7 +18,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background: #000;
+      background: #111;
       overflow: hidden;
     }
     #container {
@@ -29,27 +29,25 @@
 </head>
 
 <body>
-  <div id="container"></div>
+  <div id='container'></div>
 
-  <script>
+  <script type='text/javascript'>
     jQuery(document).ready(function () {
-      // ✅ তোমার PDF লিংক
-      var pdf = "https://cdn.jsdelivr.net/gh/patra3859-wq/flipbook-demo/BacroFlipBook.PDF";
+      var pdf = 'https://cdn.jsdelivr.net/gh/patra3859-wq/flipbook-demo/BacroFlipBook.PDF';
 
-      // ✅ dFlip Options
       var options = {
         webgl: true,
         webglShadow: true,
         soundEnable: false,
-        width: "100%",
-        height: "100%",
-        backgroundColor: "none",
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'none',
         enableDownload: false,
         direction: DFLIP.DIRECTION.LTR,
         pageMode: DFLIP.PAGE_MODE.AUTO,
         singlePageMode: DFLIP.SINGLE_PAGE_MODE.AUTO,
         transparent: true,
-        hard: "none",
+        hard: 'none',
         autoPlay: false,
         scrollWheel: true,
         zoomRatio: 1.5,
@@ -58,8 +56,7 @@
         shadowOpacity: 0.2
       };
 
-      // ✅ Flipbook initialize
-      var flipBook = $("#container").flipBook(pdf, options);
+      $('#container').flipBook(pdf, options);
     });
   </script>
 </body>

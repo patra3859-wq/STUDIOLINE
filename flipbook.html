@@ -33,8 +33,10 @@
 
   <script type='text/javascript'>
     jQuery(document).ready(function () {
+      // ✅ তোমার PDF ফাইলের লিংক
       var pdf = 'https://cdn.jsdelivr.net/gh/patra3859-wq/flipbook-demo/BacroFlipBook.PDF';
 
+      // ✅ dFlip-এর অপশন
       var options = {
         webgl: true,
         webglShadow: true,
@@ -56,7 +58,9 @@
         shadowOpacity: 0.2
       };
 
-      $('#container').flipBook(pdf, options);
+      // ✅ flipbook initialize
+      var flipBook = new DFLIP.Book(pdf, options);
+      flipBook.attachTo('#container');
     });
   </script>
 </body>
